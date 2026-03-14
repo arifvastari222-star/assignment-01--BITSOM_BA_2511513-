@@ -87,3 +87,17 @@ INSERT INTO fact_sales (date_id,store_id,product_id,units_sold,total_revenue) VA
 (8,4,6,16,37079.52),
 (9,3,7,9,247229.91),
 (10,3,4,3,176553.03);
+
+INSERT INTO dim_product (product_name, category) VALUES
+('Speaker','Electronics'),
+('Tablet','Electronics'),
+('Phone','Electronics'),
+('Smartwatch','Electronics'),
+('Atta 10kg','Grocery'),
+('Jeans','Clothing'),
+('Biscuits','Groceries'),
+('Jacket','Clothing'),
+('Laptop','Electronics'),
+('Milk 1L','Groceries'),
+('Saree','Clothing'),
+('Headphones','Electronics');
