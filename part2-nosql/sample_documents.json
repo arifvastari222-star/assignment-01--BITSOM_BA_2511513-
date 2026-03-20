@@ -12,7 +12,6 @@
     },
     "tags": ["mobile", "android", "5G"]
   },
-
   {
     "product_id": "C201",
     "name": "Men's Jacket",
@@ -23,14 +22,13 @@
     "material": "Polyester",
     "season": "Winter"
   },
-
   {
     "product_id": "G301",
     "name": "Organic Milk",
     "category": "Groceries",
     "price": 60,
     "brand": "Amul",
-    "expiry_date": "2026-04-10",
+    "expiry_date": "2024-12-31",
     "nutrition": {
       "calories": 150,
       "protein": "8g",

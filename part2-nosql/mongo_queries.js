@@ -1,5 +1,4 @@
 // OP1: insertMany() — insert all 3 documents
-
 db.products.insertMany([
   {
     product_id: "E101",
@@ -14,7 +13,6 @@ db.products.insertMany([
     },
     tags: ["mobile", "android", "5G"]
   },
-
   {
     product_id: "C201",
     name: "Men's Jacket",
@@ -25,14 +23,13 @@ db.products.insertMany([
     material: "Polyester",
     season: "Winter"
   },
-
   {
     product_id: "G301",
     name: "Organic Milk",
     category: "Groceries",
     price: 60,
     brand: "Amul",
-    expiry_date: ISODate("2024-12-31"),
+    expiry_date: new Date("2024-12-31"),  
     nutrition: {
       calories: 150,
       protein: "8g",
@@ -42,31 +39,25 @@ db.products.insertMany([
   }
 ]);
 
-
 // OP2: find() — retrieve all Electronics products with price > 20000
-
 db.products.find({
   category: "Electronics",
   price: { $gt: 20000 }
 });
 
-
 // OP3: find() — retrieve all Groceries expiring before 2025-01-01
-
 db.products.find({
   category: "Groceries",
-  expiry_date: { $lt: ISODate("2025-01-01") }
+  expiry_date: { $lt: new Date("2025-01-01") } 
 });
 
-
-// OP4: updateOne() — add discount_percent field
-
+// OP4: updateOne() — add discount_percent field to a specific product
 db.products.updateOne(
   { product_id: "E101" },
   { $set: { discount_percent: 10 } }
 );
 
-
 // OP5: createIndex() — create index on category field
-
+// Indexing on 'category' speeds up all find() queries that filter by category,
+// which is very common in a product catalog with multiple categories.
 db.products.createIndex({ category: 1 });
