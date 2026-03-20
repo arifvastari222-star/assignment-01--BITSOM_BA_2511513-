@@ -58,6 +58,5 @@ db.products.updateOne(
 );
 
 // OP5: createIndex() — create index on category field
-// Indexing on 'category' speeds up all find() queries that filter by category,
-// which is very common in a product catalog with multiple categories.
+
 db.products.createIndex({ category: 1 });
